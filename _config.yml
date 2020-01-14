@@ -14,10 +14,11 @@ direction: ltr
 # navigation menu. Optionally, you can add translations for the 'Key' in
 # languages/*.yml
 nav:
-  home: /
-  about: /about/
+  home: /  
   articles: /archives/
-  projects: https://github.com/SSBun/FlyCoding
+  books: /books/
+  about: /about/
+  projects: https://github.com/SSBun/FlyCoding  
 
 
 # Links to your social media accounts.
@@ -25,12 +26,12 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: https://github.com/SSBun/FlyCoding
-  mail: caishilin@yahoo.com
+  # github: https://github.com/SSBun/FlyCoding
+  # jianshu: https://www.jianshu.com/u/3e8081b02399  
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
-tags_overview: true
+tags_overview: false
 
 # Customize the overview with the most recent blog posts on the index page.
 # Options:

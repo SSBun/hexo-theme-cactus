@@ -6,13 +6,15 @@
       <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
     <% } %>
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-        <% for (var i in theme.nav) { %>
-    <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
-    <% } %>
-    </ul>
-    </nav>
-  </div>
+  <% if (is_post()) { %>
+    <div class="footer-right">
+      <nav>
+        <ul>
+          <% for (var i in theme.nav) { %>
+      <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
+      <% } %>
+      </ul>
+      </nav>
+    </div>
+  <% } %>
 </footer>
