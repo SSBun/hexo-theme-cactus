@@ -154,3 +154,6 @@ gravatar:
 # Display visit count
 visit_count:
   enabled: true
+
+# Display black cat
+display_black_cat: true

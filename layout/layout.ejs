@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
-<%- partial('_partial/head') %>
-<body class="max-width mx-auto px3 <%- theme.direction -%>">
+  <%- partial('_partial/head') %>
+
+  <body class="max-width mx-auto px3 <%- theme.direction -%>">
     <% if (is_post()) { %>
-      <%- partial('_partial/post/actions_desktop') %>
+    <%- partial('_partial/post/actions_desktop') %>
     <% } %>
     <div class="content index py4">
-        <% if (!is_post()) { %>
-          <%- partial('_partial/header') %>
-        <% } %>
-        <%- body %>
-        <% if (is_post()) { %>
-          <%- partial('_partial/post/actions_mobile') %>
-        <% } %>
-        <%- partial('_partial/footer') %>
+      <% if (!is_post()) { %>
+      <%- partial('_partial/header') %>
+      <% } %>
+      <%- body %>
+      <% if (is_post()) { %>
+      <%- partial('_partial/post/actions_mobile') %>
+      <% } %>
+      <%- partial('_partial/footer') %>
     </div>
     <%- partial('_partial/styles') %>
     <%- partial('_partial/scripts') %>
-</body>
-</html>
+
+    <% if (theme.display_black_cat) { %>
+    <script src="/lib/blackcat/l2dwidget.min.js"></script>
+    <script type="text/javascript">
+      var config = {
+        model: {
+          jsonPath: '/lib/blackcat/hijiki.model.json',
+        },
+        display: {
+          superSample: 1,
+          width: 245,
+          height: 245,
+          position: 'right',
+          hOffset: 0,
+          vOffset: 0,
+        },
+        mobile: {
+          show: false,
+          scale: 1,
+          motion: false,
+        },
+        react: {
+          opacityDefault: 1,
+          opacityOnHover: 0.75
+        }
+      };
+      L2Dwidget.init(config);
+    </script>
+    <% } %>
+  </body>
+
+  </html>
