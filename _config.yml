@@ -157,3 +157,7 @@ visit_count:
 
 # Display black cat
 display_black_cat: true
+
+# Valine comments
+valine:
+  enabled: true
