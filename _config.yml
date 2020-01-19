@@ -55,7 +55,7 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: true
+  show_updated: false
 
 ##############################################################################
 # Look and Feel
