@@ -15,10 +15,10 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /  
+  search: /search/
   category: /categories/
-  tag: /tags/
-  books: /books/
-  about: /about/
+  # books: /books/
+  # about: /about/
   projects: https://github.com/SSBun/FlyCoding  
 
 
