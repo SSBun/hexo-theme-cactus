@@ -65,6 +65,12 @@ archive:
 post:
   show_updated: false
 
+# Customize the copyright years
+# Note: if start_year/end_year not provided, will use current year.
+copyright:
+  start_year: 2016
+  end_year:
+
 ##############################################################################
 # Look and Feel
 ##############################################################################
@@ -76,12 +82,14 @@ post:
 #   - height: height of the logo in pixel units
 #   - url: where the logo can be found
 #   - gravatar: whether to use your Gravatar as the logo
+#   - grayout: whether to enable a hover effect on the logo
 logo:
   enabled: true
   width: 50
   height: 50
   url: /images/logo.png
   gravatar: false
+  grayout: true
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
@@ -150,8 +158,15 @@ baidu_analytics:
   enabled: true
   id: c2fdf3bebd0db8e40c37a4f37d76d33b
 
-# Fill in you Gravatar user id / email if you want to use your gravatar as the
+# Fill in your Umami Analytics tracking ID to enable Umami Analytics.
+umami_analytics:
+  enabled: false
+  id: e77e68be-f6e4-4br3-9365-2b76b57cd571
+  host: https://analytics.domain.com
+
+# Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
+# To generate hash: `$ echo -n "name@email.com" | md5`.
 gravatar:
   email: caishilin@yahoo.com
 
