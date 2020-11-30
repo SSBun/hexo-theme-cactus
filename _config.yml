@@ -15,8 +15,10 @@ direction: ltr
 # languages/*.yml
 nav:
   home: /  
+  Weekly: /weekly/
   search: /search/
   category: /categories/
+  Archives: /archives/
   # books: /books/
   # about: /about/
   projects: https://github.com/SSBun/FlyCoding  
@@ -27,7 +29,7 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  # github: https://github.com/SSBun/FlyCoding
+  # github: https://github.com/SSBun
   # jianshu: https://www.jianshu.com/u/3e8081b02399  
 
 # Customize the overview with displaying a tagcloud on the index page.
