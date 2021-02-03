@@ -2,10 +2,15 @@
     <% if (post.marks) { %>
         <% post.marks.forEach((tag, index)=> { %>
             <% let info = tag.split(':'); tag = info[0]; let color = info[1] ? info[1] : 'gray'%>            
-            <% let customColor = ""; if (color.startsWith('#')) { customColor = color }; let style = "background-color:" + customColor %>
-            <div style=<%- style %> class="post-mark-item <%= color %>">
+            <% if (color.startsWith('#')) { let style = "\"background-color:" + color + "\"" %>
+            <div style=<%= style %> class="post-mark-item <%= color %>">
                 <%- tag %>
             </div>
+            <% } else { %>            
+                <div class="post-mark-item <%= color %>">
+                    <%- tag %>
+                </div>
+            <% } %>
         <% }) %>
     <% } %>
 </div>
