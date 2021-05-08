@@ -19,9 +19,9 @@ nav:
   Category: /categories/
   # Archives: /archives/
   # books: /books/
-  Weekly: /weekly/ 
-  About: /about/
-  # projects: https://github.com/SSBun/FlyCoding  
+  Notes: /weekly/
+  Projects: https://github.com/SSBun/FlyCoding
+  # About: /about/
 
 
 # Links to your social media accounts.
