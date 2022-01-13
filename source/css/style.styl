@@ -134,9 +134,9 @@ pre
   padding-bottom: 0
   border: 1px dotted $color-border
   border-radius: 4px
-  font-size: 18px
-  font-family: $font-family-mono
-  line-height: 24px
+  font-family: $font-code
+  font-size: 1rem
+  line-height: 1.75rem
   -webkit-border-radius: 4px
 
   code
@@ -145,10 +145,11 @@ pre
     border: none
 
 code
-  padding: 0 5px
-  border: 1px dotted $color-border
-  border-radius: 2px
-  -webkit-border-radius: 2px
+  // padding: 0 5px
+  // border: 1px dotted $color-border
+  // border-radius: 2px
+  // -webkit-border-radius: 2px
+  font-weight: bold
   color: $color-accent-1
 
 subcontent
@@ -211,6 +212,10 @@ subcontent
 
   table
     width: auto
+    overflow-x: scroll 
+  
+  table::-webkit-scrollbar
+    display: none
 
   td.gutter
     text-align: right
