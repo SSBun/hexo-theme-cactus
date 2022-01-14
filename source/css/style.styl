@@ -133,11 +133,9 @@ pre
   padding: 10px 15px
   padding-bottom: 0
   border: 1px dotted $color-border
-  border-radius: 4px
-  font-family: $font-code
-  font-size: 1rem
-  line-height: 1.75rem
-  -webkit-border-radius: 4px
+  border-radius: 10px
+  font-family: $font-family-code
+  font-size: 0.9rem
 
   code
     display: block
@@ -145,11 +143,11 @@ pre
     border: none
 
 code
-  // padding: 0 5px
-  // border: 1px dotted $color-border
-  // border-radius: 2px
-  // -webkit-border-radius: 2px
-  font-weight: bold
+  padding: 0 5px
+  border-radius: 2px
+  font-family: $font-family-code
+  // background-color: lighten($color-background-code, 10%)
+  // background-color: $color-background-code
   color: $color-accent-1
 
 subcontent
@@ -157,16 +155,18 @@ subcontent
   opacity: 0.8
   font-size: 0.9em
 
+.content > table
+  tbody tr
+    &:hover
+      background-color: lighten($color-background, 5%)
 
 .highlight
   overflow-x: auto
   margin: 1rem 0
   padding: 10px 15px
-  border-radius: 4px
+  border-radius: 8px
   background: $color-background-code
-  font-family: $font-family-mono
-  // color: $color-accent-3
-  -webkit-border-radius: 4px
+  font-family: $font-family-body
 
   figcaption
     margin: -5px 0 5px
@@ -212,8 +212,8 @@ subcontent
 
   table
     width: auto
-    overflow-x: scroll 
-  
+    overflow-x: scroll
+
   table::-webkit-scrollbar
     display: none
 

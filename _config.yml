@@ -87,8 +87,8 @@ copyright:
 #   - grayout: whether to enable a hover effect on the logo
 logo:
   enabled: true
-  width: 50
-  height: 50
+  width: 60
+  height: 60
   url: /images/logo.png
   gravatar: false
   grayout: true
