@@ -52,6 +52,9 @@ var searchFunc = function(path, searchId, contentId) {
   $.ajax({
     url: path,
     dataType: "xml",
+    beforeSend: function(request) {
+      request.setRequestHeader("Upgrade-Insecure-Requests", 1);
+    },
     success: function(xmlResponse) {
       // get the contents from search data
       var datas = $("entry", xmlResponse).map(function() {
