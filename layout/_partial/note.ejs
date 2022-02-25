@@ -5,8 +5,8 @@
       <% var yearChange = false %>
       <% var monthChange = false %> 
       <% var field_sort = theme.archive.sort_updated ? 'updated' : 'date' %>
-      <% site.posts.sort(field_sort, 'desc').filter(item => { return item.tags.data.map(tag => { return tag.name }).includes('weekly') }).each(function(post) { %>
-        <% var isWeekly = post.tags.data.map(tag => { return tag.name }).includes('weekly') %>
+      <% site.posts.sort(field_sort, 'desc').filter(item => { return item.tags.data.map(tag => { return tag.name }).includes('note') }).each(function(post) { %>
+        <% var isNote = post.tags.data.map(tag => { return tag.name }).includes('note') %>
         <% var itemYear = date(post[field_sort], 'YYYY') - 0 %>
         <% var itemMonth = date(post[field_sort], 'MM') - 0 %> 
         <% yearChange = year !== itemYear %>
