@@ -35,6 +35,8 @@
               <%- list_categories() %>
             </div>
           </div>
+        <% } else if (page.type === 'about') { %>
+          <%- partial('_partial/about') %> 
         <% } else { %>
           <%- page.content %>
         <% } %>

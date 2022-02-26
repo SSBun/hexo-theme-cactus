@@ -16,12 +16,12 @@ direction: ltr
 nav:
   Home: /  
   Search: /search/
-  Category: /categories/
+  Categories: /categories/
   # Archives: /archives/
   # books: /books/
   DailyNotes: /notes/
-  Projects: https://github.com/SSBun/FlyCoding
-  # About: /about/
+  # Projects: https://github.com/SSBun/FlyCoding
+  About: /about/
 
 
 # Links to your social media accounts.
