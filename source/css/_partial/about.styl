@@ -1,0 +1,41 @@
+#about
+  .section
+    margin-top: 4rem
+
+    .container
+      display: grid
+      grid-column-gap: 2rem
+      grid-row-gap: 1rem
+      grid-template-columns: repeat(3, 33%)
+
+    .header
+      height: 50px
+      color: $color-accent-1
+      font-size: 1.3rem
+      font-weight: bold
+
+    .box
+      display: flex
+      align-items: center
+      border-radius: 6px
+      background-color: $color-background
+      color $color-accent-3
+
+      span
+        display inline-block
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        margin-right 10px
+
+      &:hover
+        background-color: $color-background-code
+
+      .favicon
+        display: inline-block
+        margin-left: 10px
+        margin-right: 5px
+        width: 1rem
+        height: auto
+
+

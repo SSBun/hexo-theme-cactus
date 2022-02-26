@@ -1,3 +1,25 @@
-<div id="archive">
-    <%= page.data.bookmarks[0].string %>
+<div id="about">
+  <% page.data.bookmarks.forEach(section => { %>
+    <div class="section">
+      <div class="header">
+        <%= section.name %>
+      </div>
+      <div class="container">
+        <% section.items.forEach(item => { %>
+          <div class="box" onclick="clickBoommark('<%= item.url %>')">
+            <img
+                class="favicon"
+                src="http://www.google.com/s2/favicons?domain=<%= item.url %>">
+            <span><%= item.name %></span>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  <% }) %>
 </div>
+
+<script>
+    function clickBoommark(url) {
+        window.open(url);
+    }
+</script>
