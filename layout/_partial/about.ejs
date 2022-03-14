@@ -21,7 +21,11 @@
             <img
                 class="favicon"
                 src="https://www.google.com/s2/favicons?domain=<%= item.url %>">
-            <span><%= item.name %></span>
+            <div class="name"><%= item.name %>
+              <% if (item.desc) { %>
+                <span class="tip"><%= item.desc %></span>
+              <% } %>
+            </div>
           </div>
         <% }) %>
       </div>

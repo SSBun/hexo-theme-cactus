@@ -25,18 +25,21 @@
       background-color: red
 
   .section
-    margin-top: 4rem
+    margin-top: 2rem
+
+    .header
+      height: 40px !important
 
     .container
       display: grid
-      grid-column-gap: 2rem
-      grid-row-gap: 1rem
-      grid-template-columns: repeat(2, 50%)
+      grid-column-gap: 1rem
+      grid-row-gap: 0.5rem
+      grid-template-columns: repeat(3, 33.3%)
 
     .header
       height: 50px
       color: $color-accent-1
-      font-size: 1.3rem
+      font-size: 1.1rem
       font-weight: bold
 
     .box
@@ -46,15 +49,34 @@
       background-color: $color-background
       color $color-accent-3
 
-      span
+      .name
         display inline-block
-        overflow: hidden
-        white-space: nowrap
-        text-overflow: ellipsis
-        margin-right 10px
+        position: relative
+
+      
+      .tip
+        width: 200px
+        pointer-events: none
+        color: $color-accent-1
+        background-color: $color-background-code
+        text-align: center
+        border-radius: 6px
+        padding: 5px 0
+        position: absolute
+        z-index: 1
+        top: -5px
+        left: 100%
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+        opacity: 0
+        transition: opacity 300ms
 
       &:hover
-        background-color: $color-background-code
+        cursor: pointer
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+      .name:hover
+        .tip
+          opacity: 1
 
       .favicon
         display: inline-block
