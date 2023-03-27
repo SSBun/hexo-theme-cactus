@@ -3,7 +3,9 @@
     <%= __('footer.copyright') %> &copy; <%= new Date().getFullYear() %> <%= config.author || config.title %>
     <a href="http://www.beian.miit.gov.cn/">京ICP备20001935号-1</a>
     <div id="friend-link-container">
+      <% if (config.friend_links) {%>
       友情连接: 
+      <% } %>
       <% for (var i in config.friend_links) {%>
         <div class="friend-link-item">
           <a href=<%= config.friend_links[i].link %>><%= config.friend_links[i].annotation %></a>
