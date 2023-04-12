@@ -162,9 +162,9 @@ baidu_analytics:
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
-  enabled: false
-  id: e77e68be-f6e4-4br3-9365-2b76b57cd571
-  host: https://analytics.domain.com
+  enabled: true
+  id: ef8530fb-8585-46e1-aba4-f66f53625458
+  host: http://csl.cool:3000
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
