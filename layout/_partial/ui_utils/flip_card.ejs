@@ -7,7 +7,7 @@
       <span class="image"></span>
         <span class="unflip">Unflip</span>
     </span>
-    <span class="inner-card">
+    <span class="inner-card" onclick="clickCard()">
 <!--      <span class="flip">Flip</span>-->
       <span class="glare"></span>
     </span>
@@ -16,6 +16,10 @@
 
 <!--  <script src="https://kit.fontawesome.com/ac26654ca2.js" crossorigin="anonymous"></script>-->
 <script>
+    function clickCard() {
+        window.open("https://app.daily.dev/?utm_source=landing&utm_medium=cta&utm_campaign=landing_conversions");
+    }
+
     let calculateAngle = function (e, item, parent) {
         let dropShadowColor = `rgba(0, 0, 0, 0.3)`
         if (parent.getAttribute('data-filter-color') !== null) {
