@@ -87,9 +87,10 @@
         </script>
 <% } %>
 <!-- Umami Analytics -->
-<% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host){ %>
-  <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script>
-<% } %>
+<!-- <% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host){ %> -->
+  <!-- <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script> -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="d39cc16d-90eb-47b6-8bf0-8e4cd43c704d"></script>
+<!-- <% } %> -->
 <!-- Disqus Comments -->
 <% if (theme.disqus.enabled && theme.disqus.shortname){ %>
     <script type="text/javascript">
