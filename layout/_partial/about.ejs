@@ -18,9 +18,17 @@
       <div class="container">
         <% section.items.forEach(item => { %>
           <div class="box" onclick="clickBookmark('<%= item.url %>')">
+            <%
+              var faviconDomain;
+              try { faviconDomain = new URL(item.url).hostname; } catch(e) {}
+              var faviconFile = faviconDomain ? '/about/favicons/' + faviconDomain.replace(/[^a-zA-Z0-9.-]/g, '_') + '.png' : '';
+              var faviconFallback = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(item.url);
+            %>
             <img
                 class="favicon"
-                src="https://www.google.com/s2/favicons?domain=<%= item.url %>">
+                src="<%= faviconFile %>"
+                onerror="this.onerror=null;this.src='<%= faviconFallback %>'"
+                alt="">
             <div class="name"><%= item.name %>
               <% if (item.desc) { %>
                 <span class="tip"><%= item.desc %></span>
